@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title>Realistic Rainfall Animation</title>
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <link rel="icon" href="./transparent_glasses.png" type="image/gif" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -16,6 +16,22 @@
     <div class="section position-relative ">
         <canvas id="rainfall"></canvas>
         <div class="container">
+            <audio id="myAudio" style="display: none;" loop>
+                <source src="./Hedwig's Theme.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+          
+            <script>
+                var audio = document.getElementById('myAudio');
+
+                function playAudio() {
+                    audio.style.display = 'block'; // Show the audio element
+                    audio.play();
+                }
+            </script>
+
+
+
 
             <div class="row  justify-content-center ">
                 <div class="col-md-12 text-center align-self-center py-5">
@@ -30,40 +46,133 @@
                                         <div class="section text-center">
                                             <h4 class="mb-4 pb-3">Log In</h4>
                                             <div class="form-group">
-                                                <input type="email" class="form-style" placeholder="Email">
+                                                <input type="email" class="form-style" placeholder="Email"
+                                                    id="EmailLogin">
                                                 <i class="input-icon uil uil-at"></i>
                                             </div>
                                             <div class="form-group mt-2">
-                                                <input type="password" class="form-style" placeholder="Password">
+                                                <input type="password" class="form-style" placeholder="Password"
+                                                    id="passwordLogin">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <a href="" class="btn mt-4">Login</a>
-                                            <p class="mb-0 mt-4 text-center"><a href="" class="link">Forgot your
-                                                    password?</a></p>
+
+                                            <p class="btn mt-4 w-100 " onclick="Login()">Login</p>
+                                            <!-- <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" /> -->
+                                            <label for="reg-log" class="mt-3 w-25">Sign UP</label>
+                                            <span>  <button onclick="playAudio()" class=" d-block mx-auto ">
+                                                <link rel="stylesheet" href="koko.css">
+                                                🎼
+                                                <div class="star-1">
+                                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                                                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                                        version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                                        <defs></defs>
+                                                        <g id="Layer_x0020_1">
+                                                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                                            <path
+                                                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                                                class="fil0"></path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div class="star-2">
+                                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                                                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                                        version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                                        <defs></defs>
+                                                        <g id="Layer_x0020_1">
+                                                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                                            <path
+                                                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                                                class="fil0"></path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div class="star-3">
+                                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                                                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                                        version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                                        <defs></defs>
+                                                        <g id="Layer_x0020_1">
+                                                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                                            <path
+                                                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                                                class="fil0"></path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div class="star-4">
+                                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                                                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                                        version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                                        <defs></defs>
+                                                        <g id="Layer_x0020_1">
+                                                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                                            <path
+                                                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                                                class="fil0"></path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div class="star-5">
+                                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                                                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                                        version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                                        <defs></defs>
+                                                        <g id="Layer_x0020_1">
+                                                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                                            <path
+                                                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                                                class="fil0"></path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div class="star-6">
+                                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                                                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                                        version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                                        <defs></defs>
+                                                        <g id="Layer_x0020_1">
+                                                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                                            <path
+                                                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                                                class="fil0"></path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </button></span>
                                         </div>
                                     </div>
                                 </div>
+
+
+
+
+
                                 <div class="card-back">
                                     <div class="center-wrap">
                                         <div class="section text-center">
                                             <h4 class="mb-3 pb-3">Sign Up</h4>
                                             <div class="form-group">
-                                                <input type="text" class="form-style" placeholder="Full Name">
+                                                <input type="text" class="form-style" placeholder="Full Name"
+                                                    id="FullName">
                                                 <i class="input-icon uil uil-user"></i>
                                             </div>
                                             <div class="form-group mt-2">
-                                                <input type="tel" class="form-style" placeholder="Phone Number">
+                                                <input type="tel" class="form-style" placeholder="Phone Number"
+                                                    id="PhoneNumber">
                                                 <i class="input-icon uil uil-phone"></i>
                                             </div>
                                             <div class="form-group mt-2">
-                                                <input type="email" class="form-style" placeholder="Email">
+                                                <input type="email" class="form-style" placeholder="Email" id="Email">
                                                 <i class="input-icon uil uil-at"></i>
                                             </div>
                                             <div class="form-group mt-2">
-                                                <input type="password" class="form-style" placeholder="Password">
+                                                <input type="password" class="form-style" placeholder="Password"
+                                                    id="Password">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <a href="" class="btn mt-4">Register</a>
+                                            <p onclick=" Register ()" class="btn mt-4" id="Register">Register</p>
                                         </div>
                                     </div>
                                 </div>
